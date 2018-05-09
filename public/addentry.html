@@ -1,0 +1,54 @@
+<!DOCTYPE="html">
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dream Book</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header role="banner">
+        <h1>Dream Book</h1>
+        <ul class="nav-links" role="navigation">
+            <li>
+                <a href="entries.html">My Entries</a>
+            </li>
+            <li>
+                <a href="addentry.html">Add New Dream</a>
+            </li>
+            <li>
+                <a href="settings.html">Settings</a>
+            </li>
+        </ul>
+    </header>
+
+    <main>
+        <form id="new-entry" class="form" method="post">
+            <fieldset>
+                <legend>Add New Dream</legend>
+                <label for="entry-name">Entry Name</label>
+                <input type="text" id="entry-name" name="name">
+                <br>
+                <label for="entry-date">Entry Date</label>
+                <input type="text" id="entry-date" name="date">
+                <br>
+                <label for="entry-post">Story</label>
+                <input type="text" id="entry-story" name="story">
+                <br>
+                <div class="dream-type"></div>
+                    <label for="type:dream">Dream</label>
+                    <input type="radio" name="dream" value="1">
+                    <label for="type:nightmare">Nightmare</label>
+                    <input type="radio" name="nightmare" value="2"></label>
+                </div>
+                <button type="submit" name="submit">Submit Dream</button>
+            </fieldset>
+        </form>
+    </main>
+
+
+
+
+</body>

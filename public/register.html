@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dream Book</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header role="banner">
+        <h1>Dream Book</h1>
+        <ul class="nav-links" role="navigation">
+            <li>
+                <a href="login.html">Login</a>
+            </li>
+            <li>
+                <a href="register.html">Register</a>
+            </li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="form-box">
+            <form class="form" id="register" action="register.html" method="post">
+                <h2>Register</h2>
+                <label for="username">Username</label>
+                <input id="username" type="text" name="username" required><br>
+                <label for="email">Email</label>
+                <input id="input-email" type="email" name="email" required><br>
+                <label for="password">Password</label>
+                <input id="input-password" type="password" name="password" required><br>
+                <label for="password">Verify Password</label>
+                <input id="verify-password" type="password" name="password2" required><br>
+                <button class="submit" type="submit" >Submit</button>
+                <h2>Already registered?
+                <a href="login.html">Click here to log-in</a>
+                <h2>
+            </form>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

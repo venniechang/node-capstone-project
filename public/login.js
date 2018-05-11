@@ -12,7 +12,14 @@ function handleRegistration(){
             return('Password does not match. Please try again.')     
         }
         else {
-            $.post("/api/register", newUser, storeUserData)
+            $.ajax({
+                url: '/api/users', 
+                type: 'POST', 
+                contentType: 'application/json', 
+                data: JSON.stringify(newUser)
+            })
+            .then
+            (storeUserData);
         }
     })
 }

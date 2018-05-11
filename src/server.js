@@ -14,7 +14,6 @@ const { PORT, DATABASE_URL } = require('./config');
 //mongoose.Promise = global.Promise();
 
 app.use(express.static('public'));
-app.listen(process.env.PORT || 8080);
 
 //add another link to get to entries.html
 app.get("/entries", (req, res) => {

@@ -12,7 +12,7 @@ const jsonParser = bodyParser.json();
 router.post('/', jsonParser, (req, res) => {
   const requiredFields = ['username', 'password', 'email'];
   const missingField = requiredFields.find(field => !(field in req.body));
-
+  console.log(req.body);
   if (missingField) {
     return res.status(422).json({
       code: 422,
@@ -21,6 +21,38 @@ router.post('/', jsonParser, (req, res) => {
       location: missingField
     });
   }
+  User.hashPassword(req.body.password)
+  .then(hash => {
+
+    User.create({
+      username: req.body.username,
+      password: hash,
+      email: req.body.email
+    })
+    .then(User => res.status(201).json(User.serialize()))
+      .catch(err => {
+        console.error(err);
+        res.status(500).json({ error: 'Something went wrong' });
+      });
+    })
+})
+
+router.delete('/api/user/:id', (req, res) =>{
+  User.findByIdAndRemove(req.params.id)
+  .then(() => {
+    res.status(204).json({ message: 'success' });
+  })
+  .catch(err => {
+    console.error(err);
+    res.status(500).json({ error: 'something went terribly wrong' });
+  });
+})
+
+
+
+
+
+/*
 
   const stringFields = ['username', 'password', 'email'];
   const nonStringField = stringFields.find(
@@ -125,8 +157,8 @@ router.post('/', jsonParser, (req, res) => {
       }
       res.status(500).json({code: 500, message: 'Internal server error'});
     });
-});
 
+*/
 // Never expose all your users like below in a prod application
 // we're just doing this so we have a quick way to see
 // if we're creating users. keep in mind, you can also

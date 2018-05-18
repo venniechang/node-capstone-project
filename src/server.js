@@ -8,7 +8,9 @@ const passport = require('passport');
 const publicDirectory = path.join(__dirname, '../public');
 const {localStrategy, jwtStrategy } = require('./strategies');
 const {router: userRouter} = require('./routers/userRouter');
-const { PORT, DATABASE_URL } = require('./config');
+const {router: authRouter} = require('./routers/authRouter');
+const {entryRouter} = require('./routers/entryRouter');
+const {PORT, DATABASE_URL} = require('./config');
 
 
 //mongoose.Promise = global.Promise();
@@ -51,7 +53,8 @@ passport.use(localStrategy);
 passport.use(jwtStrategy);
 
 app.use('/api/users/', userRouter);
-//app.use('/api/auth/', authRouter);
+app.use('/api/auth/', authRouter);
+app.use('/api/entries/', entryRouter);
 
 const jwtAuth = passport.authenticate('jwt', { session: false });
 

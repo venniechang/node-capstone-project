@@ -34,14 +34,14 @@
                 <label for="entry-date">Entry Date</label>
                 <input type="text" id="entry-date" name="date">
                 <br>
-                <label for="entry-post">Story</label>
+                <label for="entry-story">Story</label>
                 <input type="text" id="entry-story" name="story">
                 <br>
                 <div class="dream-type"></div>
                     <label for="type:dream">Dream</label>
-                    <input type="radio" name="dream" value="1">
+                    <input type="radio" name="typeOfEntry" value="dream">
                     <label for="type:nightmare">Nightmare</label>
-                    <input type="radio" name="nightmare" value="2"></label>
+                    <input type="radio" name="typeOfEntry" value="nightmare"></label>
                 </div>
                 <button type="submit" name="submit">Submit Dream</button>
             </fieldset>
@@ -49,6 +49,6 @@
     </main>
 
 
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="addentry.js"></script>
 </body>

@@ -1,0 +1,33 @@
+html {
+    background-color: #b3daff;
+}
+
+body {
+    color: white;
+}
+
+
+h1 {
+    font-family: 'Julius Sans One';
+    font-size: 50px;
+    text-align: center;
+    padding-top: 50px
+}
+
+.slogan {
+    font-family: 'Pompiere';
+    font-size: 20px;
+    margin: 0 auto;
+    min-height: 100%;
+    padding-left: 550px
+
+}
+
+.navigation-links ul {
+    text-align: center;
+    font-size: 20x;
+}
+
+.navigation-links li {
+    display: inline-block;
+}

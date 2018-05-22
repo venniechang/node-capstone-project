@@ -23,7 +23,5 @@ function afterSubmission(){
     location.href='/entries.html';
 }
 
-
-
 entrySubmission();
 

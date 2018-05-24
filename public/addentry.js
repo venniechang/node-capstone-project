@@ -12,7 +12,10 @@ function entrySubmission(){
             url: '/api/entries',
             type: 'POST',
             contentType: 'application/json',
-            data: JSON.stringify(entryDetails)
+            data: JSON.stringify(entryDetails),
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('authToken')}`
+            }
         })
         .then
         (afterSubmission)
@@ -24,4 +27,3 @@ function afterSubmission(){
 }
 
 entrySubmission();
-

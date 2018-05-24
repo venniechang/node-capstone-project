@@ -4,10 +4,14 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 const EntriesSchema = mongoose.Schema({
+    username: {
+        type: String,
+        required: true
+    },
     name: {
         type: String,
         required: true,
-        unique: true
+        //unique: true
     },
     date: {
         type: Date,

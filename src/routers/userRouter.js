@@ -1,12 +1,15 @@
 'use strict';
 const express = require('express');
 const bodyParser = require('body-parser');
+const passport = require('passport');
 
 const {User} = require('../models/User');
 
 const router = express.Router();
 
 const jsonParser = bodyParser.json();
+
+const jwtAuth = passport.authenticate('jwt', {session: false});
 
 // Post to register a new user
 router.post('/', jsonParser, (req, res) => {
@@ -127,7 +130,19 @@ router.delete('/api/user/:id', (req, res) =>{
   });
 })
 
+router.put('/', jsonParser, jwtAuth, (req, res) => {
 
+  const updateUser = {
+    email: req.body.email,
+    password: req.body.password
+  }
+
+  User
+    .findOneAndUpdate({username: req.user.username}, {$set: updateUser}, {new: true})
+    .then(updatedPost => res.status(204).end())
+    .catch(err => res.status(500).json({ message: 'Something went wrong' }));
+
+})
 
   
 router.get('/', (req, res) => {

@@ -1,6 +1,5 @@
 'use strict'
 
-
 function getEntries(){
     return $.ajax({
         type: 'GET',

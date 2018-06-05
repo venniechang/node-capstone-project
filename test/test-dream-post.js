@@ -11,7 +11,7 @@ const {TEST_DATABASE_URL, JWT_SECRET} = require('../src/config');
 
 chai.use(chaiHttp);
 
-function tearDownDb(){
+function tearDownDb() {
     return new Promise((resolve, reject) => {
         console.warn('Deleting database');
         mongoose.connection.dropDatabase()

@@ -1,5 +1,21 @@
 function entrySubmission(){
     $('#entry-id').val(window.location.search.split('=')[1])
+    $.ajax({
+        url: `/api/entries/${$('#entry-id').val()}`,
+        type: 'GET',
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem('authToken')}`
+        }
+    })
+    .then(res => {
+        console.log(res);
+        $('#entry-name').val(res.name);
+        $('#entry-date').val(res.date);
+        $('#entry-story').val(res.story);
+        $(`input[value=${res.typeOfEntry}]`).prop('checked', true);
+    })
+
+
     $('#new-entry').submit(function(event){
         event.preventDefault()
         

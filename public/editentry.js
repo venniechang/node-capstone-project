@@ -1,4 +1,5 @@
 function entrySubmission(){
+    $('#entry-id').val(window.location.search.split('=')[1])
     $('#new-entry').submit(function(event){
         event.preventDefault()
         
@@ -9,8 +10,8 @@ function entrySubmission(){
             typeOfEntry: $('input[name=typeOfEntry]:checked').val()
         }
         $.ajax({
-            url: '/api/entries',
-            type: 'POST',
+            url: `/api/entries/${$('#entry-id').val()}`,
+            type: 'PUT',
             contentType: 'application/json',
             data: JSON.stringify(entryDetails),
             headers: {

@@ -1,0 +1,60 @@
+<!DOCTYPE="html">
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dream Collection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header role="banner" class="header">
+        <img src="images/sun-cloud.png">
+        <h1>Dream Collection</h1>
+        <ul class="navigation-links" role="navigation">
+            <li>
+                <a href="entries.html">My Entries</a>
+            </li>
+            <li>
+                <a href="addentry.html">Add New Dream</a>
+            </li>
+            <li>
+                <a href="settings.html">Settings</a>
+            </li>
+            <li>
+                <div id=logout-button>Log-Out</a>
+            </li>
+        </ul>
+    </header>
+
+    <main>
+        <form id="new-entry" class="form" method="post">
+            <fieldset>
+                <legend>Edit Entry</legend>
+                <input type="hidden" id="entry-id" name="name-id">
+                <label for="entry-name">Entry Name</label>
+                <input type="text" id="entry-name" name="name">
+                <br>
+                <label for="entry-date">Entry Date</label>
+                <input type="text" id="entry-date" name="date">
+                <br>
+                <label for="entry-story">Story</label>
+                <input type="text" id="entry-story" name="story">
+                <br>
+                <div class="dream-type"></div>
+                    <label for="type:dream">Dream</label>
+                    <input type="radio" name="typeOfEntry" value="dream">
+                    <label for="type:nightmare">Nightmare</label>
+                    <input type="radio" name="typeOfEntry" value="nightmare"></label>
+                </div>
+                <button type="submit" name="submit">Edit Entry</button>
+            </fieldset>
+        </form>
+    </main>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="editentry.js"></script>
+    <script src="logout.js"></script>
+</body>

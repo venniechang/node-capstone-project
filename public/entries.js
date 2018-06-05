@@ -26,11 +26,37 @@ function displayEntries(entries){
                `<h2>${entry.name}</h2>
                 <p>${entry.date}</p>
                 <p>${entry.story}</p>
-                <p>${entry.typeOfEntry}</p>`
+                <p>${entry.typeOfEntry}</p>
+                <button class='edit-button' data-id=${entry._id}>Edit Entry</button>
+                <button class='delete-button' data-id=${entry._id}>Delete Entry</button>`
             )
         })
 
     }
+}
+
+function deleteEntries() {
+    $('.dream-entries').on('click', '.delete-button', function(event) {
+        return $.ajax({
+            type:'DELETE',
+            url: `/api/entries/${$(this).data('id')}`,
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('authToken')}`
+            }
+        })
+        .then(res => {
+        getEntries();
+        })
+    })
+}
+
+
+function editEntries() {
+    $('.dream-entries').on('click', '.edit-button', function(event) {
+        event.preventDefault();
+        location.href=`/editentry.html?id=${$(this).data('id')}`;
+    })
+
 }
 
 function handleLogout(){
@@ -40,5 +66,7 @@ function handleLogout(){
     })
 }
 
+deleteEntries();
 getEntries();
 handleLogout();
+editEntries();

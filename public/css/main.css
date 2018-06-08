@@ -17,9 +17,13 @@ h1 {
     font-size: 20px;
     margin: 0 auto;
     min-height: 100%;
-    padding-left: 550px
-
+    text-align: center;
 }
+.about {
+    display: inline-block;
+    text-align: left;
+}
+
 .navigation-links {
     margin-bottom: 5px;
     background-color: #48adff;
@@ -47,6 +51,8 @@ h1 {
     text-align: center;
     margin: 0 auto;
     display: inline-block;
+    border: 2px solid white;
+    padding: 12px 12px;
 }
 
 .form-box {
@@ -55,6 +61,11 @@ h1 {
     padding: 10px;
 
 }
+
+#login {
+    border: 2px solid white;
+}
+
 #register label {
     width: 150px;
     text-align: left;
@@ -74,10 +85,35 @@ h1 {
     font-family: 'Pompiere';
     font-size: 20px;
     margin: 0 auto;
-    min-height: 100%;
+    /*min-height: 100%;*/
     text-align: center;
 }
 
 .bad-message {
     display: none;
+}
+
+.test-user {
+    text-align: center;
+}
+
+.demo-message {
+    display: inline-block;
+    text-align: left;
+
+}
+
+.entry-container {
+    border: 2px solid white;
+    flex: 0 1 24%;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: .5%
+
+}
+
+.dream-entries{
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: space-between;*/
 }

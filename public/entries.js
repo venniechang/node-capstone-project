@@ -23,12 +23,14 @@ function displayEntries(entries){
     else {
         entries.forEach(entry => {
             $('.dream-entries').append(
-               `<h2>${entry.name}</h2>
-                <p>${entry.date}</p>
-                <p>${entry.story}</p>
-                <p>${entry.typeOfEntry}</p>
-                <button class='edit-button' data-id=${entry._id}>Edit Entry</button>
-                <button class='delete-button' data-id=${entry._id}>Delete Entry</button>`
+                `<div class="entry-container">
+                 <h2>${entry.name}</h2>
+                 <p>${entry.date}</p>
+                 <p>${entry.story}</p>
+                 <p>${entry.typeOfEntry}</p>
+                 <button class='edit-button' data-id=${entry._id}>Edit Entry</button>
+                 <button class='delete-button' data-id=${entry._id}>Delete Entry</button>
+                 </div>`
             )
         })
 

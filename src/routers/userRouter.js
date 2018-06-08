@@ -86,7 +86,7 @@ router.post('/', jsonParser, (req, res) => {
         return Promise.reject({
           code: 422,
           reason: 'ValidationError',
-          message: 'Username already taken',
+          message: 'Username already taken. Please try again.',
           location: 'username'
         });
       }
@@ -132,16 +132,20 @@ router.delete('/api/user/:id', (req, res) =>{
 
 router.put('/', jsonParser, jwtAuth, (req, res) => {
 
-  const updateUser = {
-    email: req.body.email,
-    password: req.body.password
-  }
 
-  User
-    .findOneAndUpdate({username: req.user.username}, {$set: updateUser}, {new: true})
-    .then(updatedPost => res.status(204).end())
-    .catch(err => res.status(500).json({ message: 'Something went wrong' }));
+  User.hashPassword(req.body.password)
+  .then (hash => {
+    
+    const updateUser = {
+      email: req.body.email,
+      password: hash
+    }
 
+    User
+      .findOneAndUpdate({username: req.user.username}, {$set: updateUser}, {new: true})
+      .then(updatedPost => res.status(204).end())
+      .catch(err => res.status(500).json({ message: 'Something went wrong' }));
+  })
 })
 
   

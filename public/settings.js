@@ -17,7 +17,6 @@ function updateUserCredentials() {
         password: $('#update-password').val(),
         email: $('#update-email').val()
     }
-
     $.ajax({
         headers: {
             Authorization: `Bearer ${localStorage.getItem('authToken')}`
@@ -31,7 +30,7 @@ function updateUserCredentials() {
 }
 
 function afterSubmission(){
-    location.href='/entries.html';
+    $('.settings-placeholder').text('Credentials Successfully Updated.');
 }
 
 settingChanges();

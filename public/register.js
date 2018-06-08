@@ -20,15 +20,18 @@ function handleRegistration(){
             })
             .then
             (registerSuccess)
-            .catch(res => {
-            console.log(res);
-            })
+            .catch(registerFail)
         }
     })
 }
 
+function registerFail(error){
+    $('.placeholder').text(error.responseJSON.message)
+}
+
+
 function registerSuccess(){
-    $('.placeholder').text("Account Created, please login");
+    $('.placeholder').text("Account Created, please login.");
 }
 
 

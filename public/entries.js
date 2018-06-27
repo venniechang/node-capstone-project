@@ -17,15 +17,21 @@ function getEntries(){
 function displayEntries(entries){
     $('.dream-entries').empty();
     console.log(entries);
+
+    
+
     if (entries.length==0) {
         $('.dream-entries').text('You currently have no entries.')
     }
     else {
         entries.forEach(entry => {
+
+            let formattedDate = moment(entry.date).format('MMM Do YYYY');
+            console.log(formattedDate);
             $('.dream-entries').append(
                 `<div class="entry-container">
                  <h2>${entry.name}</h2>
-                 <p>${entry.date}</p>
+                 <p>${formattedDate}</p>
                  <p>${entry.story}</p>
                  <p>${entry.typeOfEntry}</p>
                  <button class='edit-button' data-id=${entry._id}>Edit Entry</button>
@@ -33,7 +39,6 @@ function displayEntries(entries){
                  </div>`
             )
         })
-
     }
 }
 

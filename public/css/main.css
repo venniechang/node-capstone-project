@@ -1,5 +1,5 @@
 html {
-    background-color: #b3daff;
+    background-color: white;
 }
 
 body {
@@ -7,26 +7,29 @@ body {
 }
 
 h1 {
-    font-family: 'Julius Sans One';
+    font-family: 'Montserrat', sans-serif;
     font-size: 50px;
-    padding-top: 50px
+    padding-top: 50px;
+    color: black;
 }
 
 .slogan {
-    font-family: 'Pompiere';
+    font-family: 'Abel', sans-serif;
     font-size: 20px;
     margin: 0 auto;
     min-height: 100%;
     text-align: center;
+    color: black;
 }
 .about {
     display: inline-block;
     text-align: left;
+    color: black;
 }
 
 .navigation-links {
     margin-bottom: 5px;
-    background-color: #48adff;
+    background-color: white;
     min-height: 42px;
     padding-left: 0;
 }
@@ -51,8 +54,9 @@ h1 {
     text-align: center;
     margin: 0 auto;
     display: inline-block;
-    border: 2px solid white;
+    border: 2px solid rgb(206, 206, 206);
     padding: 12px 12px;
+    color: black;
 }
 
 .form-box {
@@ -63,7 +67,12 @@ h1 {
 }
 
 #login {
-    border: 2px solid white;
+    border: 2px solid rgb(206, 206, 206);
+    color: black;
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
+    padding: 12px 12px;
 }
 
 #register label {
@@ -87,10 +96,12 @@ h1 {
     margin: 0 auto;
     /*min-height: 100%;*/
     text-align: center;
+    color: black;
 }
 
 .bad-message {
     display: none;
+    color: black;
 }
 
 .test-user {
@@ -99,12 +110,13 @@ h1 {
 
 .demo-message {
     display: inline-block;
-    text-align: left;
+    text-align: center;
+    color: black;
 
 }
 
 .entry-container {
-    border: 2px solid white;
+    border: 2px solid lightblue;
     flex: 0 1 24%;
     box-sizing: border-box;
     padding: 20px;
@@ -115,5 +127,87 @@ h1 {
 .dream-entries{
     display: flex;
     flex-wrap: wrap;
+    font-family: 'Barlow', sans-serif;
     /*justify-content: space-between;*/
 }
+
+.form {
+    color: black;
+    padding: 10px;
+    font-family: 'Barlow', sans-serif;
+    display: inline-block;
+    
+}
+
+main {
+    text-align: center;
+}
+
+.dream-entries {
+    color: black;
+}
+
+#logout-button {
+    color: black;
+}
+
+#entry-name {
+    font-family: 'Barlow', sans-serif;
+}
+
+#entry-date {
+    font-family: 'Barlow', sans-serif;
+}
+
+#entry-story {
+    font-family: 'Barlow', sans-serif;
+}
+
+.home-buttons {
+    display:inline-block;
+    padding:0.5em 3em;
+    border:0.16em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.15s;
+}
+
+.home-buttons:hover{
+    border-color:#DDDDDD;
+}
+    
+.home-buttons:active{
+    color:#BBBBBB;
+    border-color:#BBBBBB;
+}
+
+.nav-buttons {
+    display:inline-block;
+    padding:0.5em 3em;
+    border:0.16em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.15s;
+}
+
+.nav-buttons:hover{
+    border-color:#DDDDDD;
+}
+    
+.nav-buttons:active{
+    color:#BBBBBB;
+    border-color:#BBBBBB;
+}
+

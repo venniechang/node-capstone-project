@@ -1,6 +1,6 @@
 <h1>Dream Collection</h1>
 
-<p><a href="https://www.thinkful.com/">Thinkful</a>Node Capstone Project - An application that utilizes both frontend and backend technologies, built with <a href="https://nodejs.org">Node.js</a> and Javascript.
+<p><a href="https://www.thinkful.com/">Thinkful</a> Node Capstone Project - An application that utilizes both frontend and backend technologies, built with <a href="https://nodejs.org">Node.js</a> and Javascript.
 
 ![homepage](https://github.com/venniechang/node-capstone-project/blob/master/public/images/homepage.jpg)
 

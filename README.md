@@ -2,15 +2,15 @@
 
 <p><a href="https://www.thinkful.com/">Thinkful</a>Node Capstone Project - An application that utilizes both frontend and backend technologies, built with <a href="https://nodejs.org">Node.js</a> and Javascript.
 
-![homepage](https://github.com/venniechang/node-capstone-project/public/images/homepage.jpg)
+![homepage](https://github.com/venniechang/node-capstone-project/blob/master/public/images/homepage.jpg)
 
-![register](https://github.com/venniechang/node-capstone-project/public/images/register.jpg)
+![register](https://github.com/venniechang/node-capstone-project/blob/master/public/images/register.jpg)
 
-![login](https://github.com/venniechang/node-capstone-project/public/images/login.jpg)
+![login](https://github.com/venniechang/node-capstone-project/blob/master/public/images/login.jpg)
 
-![dashboard](https://github.com/venniechang/node-capstone-project/public/images/dashboard.jpg)
+![dashboard](https://github.com/venniechang/node-capstone-project/blob/master/public/images/dashboard.jpg)
 
-![settings](https://github.com/venniechang/node-capstone-project/public/images/settings.jpg)
+![settings](https://github.com/venniechang/node-capstone-project/blob/master/public/images/settings.jpg)
 
 <h2>What is Dream Collection?</h2>
 <p>This website is designed for anyone who loves recording their daily dreams.</p>

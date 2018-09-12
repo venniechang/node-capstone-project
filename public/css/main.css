@@ -129,6 +129,7 @@ h1 {
     flex-wrap: wrap;
     font-family: 'Barlow', sans-serif;
     /*justify-content: space-between;*/
+    text-align: center;
 }
 
 .form {

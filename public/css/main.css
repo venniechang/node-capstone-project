@@ -82,12 +82,19 @@ h1 {
     margin: auto;
 }
 
+#login label {
+    width: 150px;
+    text-align: left;
+    float: left;
+    margin: auto;
+}
+
 .register-button {
-    margin: 10px;
+   margin-top: 30px;
 }
 
 .login-button {
-    margin: 10px;
+    margin-top: 30px;
 }
 
 .login-slogan {
@@ -138,6 +145,13 @@ h1 {
     font-family: 'Barlow', sans-serif;
     display: inline-block;
     
+}
+
+#new-entry label {
+    width: 100px;
+    text-align: left;
+    float: left;
+    margin: auto;
 }
 
 main {
@@ -217,6 +231,14 @@ main {
 
 #settings {
     font-family: 'Barlow', sans-serif;
+    margin: 5px;
+}
+
+#settings label {
+    width: 150px;
+    text-align: left;
+    float: left;
+    margin: auto;
 }
 
 .submit {

@@ -147,10 +147,10 @@ h1 {
     
 }
 
-#new-entry label {
+.input-area {
     width: 100px;
     text-align: left;
-    float: left;
+    float: left; 
     margin: auto;
 }
 
@@ -254,6 +254,7 @@ main {
     color:#FFFFFF;
     text-align:center;
     transition: all 0.15s;
+    background-color: #BBBBBB;
 }
 
 .submit:hover{
@@ -263,4 +264,45 @@ main {
 .submit:active{
     color:#BBBBBB;
     border-color:#BBBBBB;
+}
+
+#new-entry textarea {
+    width: 100%
+}
+
+form input {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.edit-button {
+    display:inline-block;
+    padding:0.5em 3em;
+    border:0.16em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.15s;
+    background-color: #BBBBBB;
+}
+
+.delete-button {
+    display:inline-block;
+    padding:0.5em 3em;
+    border:0.16em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.15s;
+    background-color: #BBBBBB;
 }

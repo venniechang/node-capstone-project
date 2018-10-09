@@ -49,7 +49,7 @@
 </ul>
 
 <h2>Live Link</h2>
-<p>An updated version of this website can be found at: <a href="https://enigmatic-beyond-59564.herokuapp.com">https://enigmatic-beyond-59564.herokuapp.com</a></p>
+<p>An updated version of this website can be found at: <a href="https://dreamcollection.herokuapp.com">https://dreamcollection.herokuapp.com</a></p>
 
 <h2>Responsive Design</h2>
 <p>This website is created to be responsive in both desktop and mobile devices.</p>
